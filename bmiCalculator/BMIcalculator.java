@@ -14,12 +14,12 @@ public class BMIcalculator {
 		
 		// request user input of height and weight
 	System.out.println("Please enter your height in inches:");
-		double height = scan.nextInt();
-		scan.nextLine();
+		double height = Validator.readValidInt();
+		
 		//
 	System.out.println("Please enter your weight in pounds:");
-		double weight = scan.nextInt();
-		scan.nextLine();
+		double weight = Validator.readValidInt();
+		
 		
 		// calculate the users bmi baser on the height and weight input
 		double bmi = ((weight * 703) / (height * height));
