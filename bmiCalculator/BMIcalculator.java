@@ -18,8 +18,45 @@ scan.nextLine();
 
 double bmi = ((weight*703)/(height*height));
 
-System.out.println("Based on your height of " + height + " inches and your weight of "+ weight + " pounds your bmi is " + bmi + ".");
-//System.out.println(bmi);
+System.out.println("\nBased on your height of " + height + " inches and your weight of "+ weight + " pounds your bmi is " + bmi + ".");
+//print out the users bmi category
+System.out.println("Your BMI indicates that you are:");
+getCategory(bmi);
+
 	}
 
-}
+	/**
+	 * @param bmi
+	 */
+	
+//calculates the bmi category based on various bmi ranges
+	public static void getCategory(double bmi) {
+		if (bmi < 15){
+				System.out.println("very severely underweight.");
+		}
+		if (bmi >= 15 && bmi <=16 ){
+			System.out.println("severely underweight.");
+		}
+		if (bmi >= 16.1 && bmi <= 18.4){
+			System.out.println("underweight.");
+		}
+		if (bmi >= 18.5 && bmi <= 24.9){
+			System.out.println("underweight.");
+		}
+		if (bmi >= 25 && bmi <= 29.9){
+			System.out.println("overweight.");
+		}
+		if (bmi >= 30 && bmi <= 34.9){
+			System.out.println("moderately obese.");
+		}
+		if (bmi >= 35 && bmi <= 39.9){
+			System.out.println("severely obese.");
+		}
+		if (bmi >= 40.0){
+			System.out.println("very severely obese.");
+		}
+	}
+		
+	}
+
+
