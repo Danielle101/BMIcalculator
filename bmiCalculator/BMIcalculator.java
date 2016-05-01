@@ -10,7 +10,9 @@ public class BMIcalculator {
 		Scanner scan = new Scanner(System.in);
 		
 		// welcome the user to the app
-	System.out.println("Welcome to the Body Mass Index (BMI) Calculator!\n");
+	System.out.println("Welcome to the Body Mass Index (BMI) Calculator!\n\nThis app will calculate your"
+			+ " bmi based on the height and weight that you input.\nPlease be sure to input"
+			+ " your accurate weight and height.\n");
 		
 		// request user input of height and weight
 	System.out.println("Please enter your height in inches:");
@@ -23,13 +25,15 @@ public class BMIcalculator {
 		
 		// calculate the users bmi baser on the height and weight input
 		double bmi = ((weight * 703) / (height * height));
-		//converts the bmi to two place decimal format
-		DecimalFormat df = new DecimalFormat("####0.00");
+		//converts the bmi to single place decimal format
+		DecimalFormat df = new DecimalFormat("####0.0");
 	System.out.println("\nBased on your height of " + height + " inches and your weight of " + weight
 				+ " pounds your bmi is " + df.format(bmi) + ".");
 		// print out the users bmi category
 	System.out.println("\nYour BMI indicates that you are:");
 		getCategory(bmi);
+		//close scanner
+	    scan.close();
 
 	}
 
@@ -63,6 +67,7 @@ public class BMIcalculator {
 		if (bmi >= 40.0) {
 			System.out.println("very severely obese");
 		}
+		
 	}
-
+    
 }
